@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2020 11:33:32 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="Model.Book" optimistic-lock="version" schema="public" table="book">
+    <id name="bookid" type="string">
+      <column length="10" name="Book_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="title" type="string">
+      <column length="50" name="Book_Title"/>
+    </property>
+    <property name="publishingHouse" type="string">
+      <column length="30" name="Publishing_House"/>
+    </property>
+    <property name="dateOfPublication" type="date">
+      <column length="13" name="Date_of_Publication"/>
+    </property>
+    <property name="author" type="string">
+      <column length="50" name="Author"/>
+    </property>
+    <property name="pages" type="java.lang.Integer">
+      <column name="pages"/>
+      <property name="category" type="string">
+      <column length="500" name="Book_category"/>
+    </property>
+  </class>
+</hibernate-mapping>

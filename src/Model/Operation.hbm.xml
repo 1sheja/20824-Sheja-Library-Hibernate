@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 11, 2020 11:33:32 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="LibraryModel.Operation" optimistic-lock="version" schema="public" table="checkinout">
+    <id name="id" type="string">
+      <column length="500" name="Client_id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="client" type="string">
+      <column length="200" name="client_name"/>
+    </property>
+    <property name="book" type="string">
+      <column length="200" name="book"/>
+    </property>
+    <property name="date" type="date">
+      <column length="13" name="Return_date"/>
+    </property>
+    <property name="operationCategory" type="string">
+      <column length="15" name="operation_category"/>
+    </property>
+  </class>
+</hibernate-mapping>
